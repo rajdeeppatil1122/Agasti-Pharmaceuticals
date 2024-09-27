@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_orders"
+    tools:context=".MyOrdersFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMyOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/topLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/textViewLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/sky_blue_box"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bariol_bold_webfont"
+                    android:gravity="center"
+                    android:text="Your Purchase History"
+                    android:textColor="#0BB8FF"
+                    android:textSize="26dp" />
+
+                <ImageView
+                    android:layout_marginStart="12dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/shopping" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMyOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topLL" />
+
+            <TextView
+                android:id="@+id/txtViewMyOrders"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/topLL"
+                android:layout_height="160dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/background_whilte_box"
+                android:fontFamily="@font/bariol_bold_webfont"
+                android:gravity="center"
+                android:text="No purchases yet...\nTap here to make your 1st purchase!"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
